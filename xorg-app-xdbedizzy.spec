@@ -1,19 +1,18 @@
 Summary:	xdbedizzy application
 Summary(pl):	Aplikacja xdbedizzy
 Name:		xorg-app-xdbedizzy
-Version:	0.99.0
-Release:	0.02
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Application
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/app/xdbedizzy-%{version}.tar.bz2
-# Source0-md5:	0ea7a400623520081f0757acb208b7da
-Patch0:		xdbedizzy-man.patch
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/app/xdbedizzy-%{version}.tar.bz2
+# Source0-md5:	a8e4e4bc83642d35341341769adac098
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXprintUtil-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +23,6 @@ Aplikacja xdbedizzy.
 
 %prep
 %setup -q -n xdbedizzy-%{version}
-%patch0 -p1
 
 %build
 %{__aclocal}
@@ -39,12 +37,14 @@ Aplikacja xdbedizzy.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	appmandir=%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*.1*
+%{_mandir}/man1/*.1x*
