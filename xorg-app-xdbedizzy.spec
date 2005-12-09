@@ -1,18 +1,19 @@
 Summary:	xdbedizzy application
 Summary(pl):	Aplikacja xdbedizzy
 Name:		xorg-app-xdbedizzy
-Version:	0.99.2
+Version:	0.99.3
 Release:	0.1
 License:	MIT
 Group:		X11/Application
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/app/xdbedizzy-%{version}.tar.bz2
-# Source0-md5:	4fe4b31adf345054ef8ad9e283ca4696
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/app/xdbedizzy-%{version}.tar.bz2
+# Source0-md5:	5c5a249839d0b2d0a880d46db9141c2f
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libXp-devel
 BuildRequires:	xorg-lib-libXprintUtil-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,8 +38,7 @@ Aplikacja xdbedizzy.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	appmandir=%{_mandir}/man1
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
