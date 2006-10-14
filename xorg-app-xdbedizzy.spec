@@ -1,12 +1,12 @@
 Summary:	xdbedizzy application
 Summary(pl):	Aplikacja xdbedizzy
 Name:		xorg-app-xdbedizzy
-Version:	1.0.1
-Release:	0.1
+Version:	1.0.2
+Release:	1
 License:	MIT
-Group:		X11/Application
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xdbedizzy-%{version}.tar.bz2
-# Source0-md5:	ea4b09e575caaf6996196c3cfd2532cd
+Group:		X11/Applications
+Source0:	http://xorg.freedesktop.org/releases/individual/app/xdbedizzy-%{version}.tar.bz2
+# Source0-md5:	ecef9cfd197d00980e0d69ee4126d890
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
