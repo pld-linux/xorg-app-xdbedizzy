@@ -1,5 +1,5 @@
 Summary:	xdbedizzy application
-Summary(pl.UTF-8):   Aplikacja xdbedizzy
+Summary(pl.UTF-8):	Aplikacja xdbedizzy
 Name:		xorg-app-xdbedizzy
 Version:	1.0.2
 Release:	1
