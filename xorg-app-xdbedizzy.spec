@@ -1,5 +1,5 @@
 Summary:	xdbedizzy application
-Summary(pl):	Aplikacja xdbedizzy
+Summary(pl.UTF-8):   Aplikacja xdbedizzy
 Name:		xorg-app-xdbedizzy
 Version:	1.0.2
 Release:	1
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xdbedizzy application.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja xdbedizzy.
 
 %prep
