@@ -2,11 +2,12 @@ Summary:	xdbedizzy application - demo of DBE creating a double buffered spinning
 Summary(pl.UTF-8):	Aplikacja xdbedizzy - demo DBE tworzące podwójnie buforowaną obracaną scenę
 Name:		xorg-app-xdbedizzy
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xdbedizzy-%{version}.tar.bz2
 # Source0-md5:	7e730d15679490bd00a8b69e775b3487
+Patch0:		xdbedizzy-build.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -26,6 +27,7 @@ buforowaną obracaną scenę.
 
 %prep
 %setup -q -n xdbedizzy-%{version}
+%patch0 -p1
 
 %build
 %{__aclocal}

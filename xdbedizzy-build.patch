@@ -1,0 +1,12 @@
+diff -urN xdbedizzy-1.1.0.org/configure.ac xdbedizzy-1.1.0/configure.ac
+--- xdbedizzy-1.1.0.org/configure.ac	2010-10-31 18:08:53.000000000 +0100
++++ xdbedizzy-1.1.0/configure.ac	2013-05-31 11:15:18.070064248 +0200
+@@ -32,7 +32,7 @@
+ 	  [m4_fatal([must install xorg-macros 1.8 or later before running autoconf/autogen])])
+ XORG_MACROS_VERSION(1.8)
+ 
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ XORG_DEFAULT_OPTIONS
+ 
