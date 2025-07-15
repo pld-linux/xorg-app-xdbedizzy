@@ -27,7 +27,7 @@ buforowaną obracaną scenę.
 
 %prep
 %setup -q -n xdbedizzy-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
